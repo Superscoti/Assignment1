@@ -550,6 +550,7 @@ ul.style3 .date a:hover
 	width: 384px;
 }
 
+/*pageloader AddOn*/
 .loader {
 	position: fixed;
 	z-index: 99;
@@ -573,6 +574,5 @@ ul.style3 .date a:hover
 	100% {
 		opacity: 0;
 		visibility: hidden;
-
 	}
 }
