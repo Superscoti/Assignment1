@@ -562,7 +562,6 @@ ul.style3 .date a:hover
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	animation-duration: 3s;
 }
 
 .loader.hidden {

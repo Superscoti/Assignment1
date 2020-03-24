@@ -1,11 +1,9 @@
-window.addEventListener("load", function(){
-    const loader = this.document.querySelector(".loader");
-    loader.className += " hidden"; // class first load then hidden
-})
+window.addEventListener("load", setTimeoutFunction);
 
-/*
-setTimeout(() => {
-        const loader = document.querySelector(".loader");
-        loader.className += " hidden";
-      }, 2000);
-*/
+function setTimeoutFunction() {
+  setTimeout(hideLoader, 2000);
+}
+
+function hideLoader() {
+  const loader = document.querySelector(".loader").classList.add("hidden");
+}
