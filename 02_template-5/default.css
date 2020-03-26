@@ -575,3 +575,21 @@ ul.style3 .date a:hover
 		visibility: hidden;
 	}
 }
+
+/*toggle dark mode*/
+.dark-mode-button {
+	color: rgb(212, 212, 212);
+}
+
+#wrapper-darkmode {
+	margin-top: 30px;
+	padding-bottom: 50px;
+	background: rgb(29, 29, 29);
+	box-shadow: 0px 10px 0px rgba(0,0,0,0.03), 0px -10px 0px rgba(0,0,0,0.03);
+}
+
+.flex-mode {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
