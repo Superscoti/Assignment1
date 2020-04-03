@@ -23,7 +23,7 @@ Released   : 20130425
 <link href="default_ie6.css" rel="stylesheet" type="text/css" />
 <![endif]-->
 </head>
-<body>
+<body onload="startTime()">
 	<!--Page Preloader-->
 	<div class="loader">
 		<img src="images/loading.gif">
@@ -44,18 +44,20 @@ Released   : 20130425
 				</ul>
 			</div>
 		</div>
+		<!--Live-Clock-->
+		<p id="dateText"></p>
+		<!--Toggle Dark/Light Mode-->
 		<div class="flex-mode">
-			<!--Toggle Dark Mode-->
-			<wrapper class="button-wrapper">
-				<button onclick="toggleDarkMode()" class="button-style">Activate Dark Mode</button>
-			</wrapper>
+			<button onclick="toggleDarkMode()" class="button-style">Activate Dark Mode</button>
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
-			<!--Toggle Light Mode-->
-			<wrapper class="button-wrapper">
-				<button onclick="toggleLightMode()" class="button-style">Activate Light Mode</button>
-			</wrapper>
+			<button onclick="toggleLightMode()" class="button-style">Activate Light Mode</button>
 		</div>
-		<div id="banner" class="container"> <img src="images/header-photo.jpg" width="1200" height="400" alt="" /> </div>
+		<!--Slideshow-->
+		<div id="banner" class="slideshow"> 
+			<img src="images/headphones1.png" class="slides animate-left" width="1200" height="400" alt="" />
+			<img src="images/camera1.png" class="slides animate-left" width="1200" height="400" alt="" />
+			<img src="images/header-photo.jpg" class="slides animate-left" width="1200" height="400" alt="" /> 
+		</div>
 		<div id="three-column" class="container">
 			<header>
 				<h2>Pellentesque tristique ante ut risus</h2>
