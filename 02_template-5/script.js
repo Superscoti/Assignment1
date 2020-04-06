@@ -11,39 +11,46 @@ function hideLoader() {
 
 /*toggle Dark Mode*/
 function toggleDarkMode() {
-   var darkMode = document.body;
+   let darkMode = document.body;
    darkMode.classList.toggle("dark-mode-button");
    document.getElementById('wrapper').id = 'wrapper-darkmode';
 }
 
 function toggleLightMode() {
-  var lightMode = document.body;
+  let lightMode = document.body;
   lightMode.classList.toggle("dark-mode-button");
   document.getElementById('wrapper-darkmode').id = 'wrapper';
 }
 
-/*Slideshow*/
-
-
 /*Live-Clock*/
 function startTime() {
+  let liveTime = new Date();
+  let hours = liveTime.getHours();
+  let minutes = liveTime.getMinutes();
+  let second = liveTime.getSeconds();
 
-  var liveTime = new Date();
-  var hours = liveTime.getHours();
-  var months = liveTime.getMinutes();
-  var second = liveTime.getSeconds();
-
-  months = liveTimeCheck(months);
-  second = liveTimeCheck(second);
+  minutes = liveTimeCheckUnder10(minutes);
+  second = liveTimeCheckUnder10(second);
 
   document.getElementById('dateText').innerHTML =
-  hours + ":" + months + ":" + second;
+  hours + ":" + minutes + ":" + second;
 
-  var time = setTimeout(startTime, 500);
+  let time = setTimeout(startTime, 500);
 }
-function liveTimeCheck(i) {
-  if (i < 10) {
-    i = "0" + i
+
+function liveTimeCheckUnder10(number) {
+  if (number < 10) {
+    number = "0" + number
   };
-  return i;
+  return number;
+}
+
+/*mail-alert*/
+function mailAlert() {
+  alert("Our mailadress is not working for 2 months! Please call us instead of mailing!");
+}
+
+/*Back-up-prank*/
+function youWantToGoBackUp() {
+  document.getElementById("pranked").innerHTML = "Pranked! You have to scroll-up by yourself"
 }

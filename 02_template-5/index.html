@@ -45,18 +45,16 @@ Released   : 20130425
 			</div>
 		</div>
 		<!--Live-Clock-->
-		<p id="dateText"></p>
+		<p id="dateText" class="normal" onmouseover="zoomOut()"></p>
 		<!--Toggle Dark/Light Mode-->
 		<div class="flex-mode">
 			<button onclick="toggleDarkMode()" class="button-style">Activate Dark Mode</button>
 			<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
 			<button onclick="toggleLightMode()" class="button-style">Activate Light Mode</button>
 		</div>
-		<!--Slideshow-->
-		<div id="banner" class="slideshow"> 
-			<img src="images/headphones1.png" class="slides animate-left" width="1200" height="400" alt="" />
-			<img src="images/camera1.png" class="slides animate-left" width="1200" height="400" alt="" />
-			<img src="images/header-photo.jpg" class="slides animate-left" width="1200" height="400" alt="" /> 
+		
+		<div> 
+			<img src="images/header-photo.jpg" class="image" style="display: block; margin-left: auto; margin-right: auto; margin-top: 3rem;" width="1200" height="400" alt="" /> 
 		</div>
 		<div id="three-column" class="container">
 			<header>
@@ -124,7 +122,8 @@ Released   : 20130425
 			<ul class="style5">
 				<li class="first"><span class="address">Address</span> <span class="address-01">1234 Somewhere Road #4285 <br />
 					Nashville, TN 00000</span> </li>
-				<li> <span class="mail">Mail</span> <span class="mail-01"><a href="#">someone@untitled.tld</a></span> </li>
+				<!--mail-alert*/-->
+				<li> <span class="mail">Mail</span> <span class="mail-01"><button onclick="mailAlert()" href="#" class="alertStyle">someone@untitled.tld</button></span> </li>
 				<li> <span class="phone">Phone</span> <span class="phone-01">(000) 000-0000</span> </li>
 			</ul>
 		</div>
@@ -132,6 +131,11 @@ Released   : 20130425
 </div>
 <div id="footer">
 	<p>&copy; Untitled. All rights reserved. Design by <a href="http://templated.co" rel="nofollow">TEMPLATED</a>. Photos by <a href="http://fotogrph.com/">Fotogrph</a>.</p>
+	<!--Back-up-prank-->
+	<div class="prank-user">
+		<h3 id="pranked">Click Here!</h3>
+		<button class="prank" onclick="youWantToGoBackUp()">Back-up!</button>
+	</div>
 </div>
 </body>
 </html>
