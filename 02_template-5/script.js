@@ -1,4 +1,4 @@
-/*pre-loading animation*/
+/*pre-loading animation (helped by Josef)*/
 window.addEventListener("load", setTimeoutFunction);
 
 function setTimeoutFunction() {
@@ -27,13 +27,15 @@ function startTime() {
   let liveTime = new Date();
   let hours = liveTime.getHours();
   let minutes = liveTime.getMinutes();
-  let second = liveTime.getSeconds();
-
+  let seconds = liveTime.getSeconds();
+  
+  //copy-code
   minutes = liveTimeCheckUnder10(minutes);
-  second = liveTimeCheckUnder10(second);
-
+  seconds = liveTimeCheckUnder10(seconds);
+  //
+  
   document.getElementById('dateText').innerHTML =
-  hours + ":" + minutes + ":" + second;
+  hours + ":" + minutes + ":" + seconds;
 
   let time = setTimeout(startTime, 500);
 }
