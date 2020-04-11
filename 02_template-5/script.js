@@ -1,4 +1,4 @@
-/*pre-loading animation (helped by Josef)*/
+/*pre-loading animation (helped by Josef because the setTimeout() did not work)*/
 window.addEventListener("load", setTimeoutFunction);
 
 function setTimeoutFunction() {
